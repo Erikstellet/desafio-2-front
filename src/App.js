@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-function App() {
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
+
+import Catalogo from './pages/catalogo';
+import Cart from './pages/cart';
+import { NotFound404 } from './pages/notFound404';
+
+import { Wrapper } from './styles/global-styles';
+import { CartProviderProvider } from './contexts/cart-provider';
+
+function App()
+{
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <>
+    <Router>
+      <CartProviderProvider>
+      <Header />
+      <Wrapper>
+        <Switch>
+          <Route path="/" component={ Catalogo } exact/>
+          <Route path="/carrinho" component={ Cart }/>
+          <Route path="*" component={ NotFound404 } />
+        </Switch>
+      </Wrapper>
+      
+      <Footer />
+      </CartProviderProvider>
+    </Router>
+  </>
   );
 }
 
