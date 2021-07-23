@@ -1,8 +1,8 @@
 # Desafio 2 | Front-end 
 
 <h1 align="center">
-    <img src="public/tela-1.JPG" width="300">
-    <img src="public/tela-2.JPG" width="300">
+    <img src="public/tela-1.JPG" width="500">
+    <img src="public/tela-2.JPG" width="500">
 </h1>
 
 
