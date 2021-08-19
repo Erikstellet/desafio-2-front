@@ -22,7 +22,7 @@ O projeto foi elaborado durante o desafio BGC,contudo foi feito back e front end
 ```bash
 
     # Clone o projeto
-    $ git clone https://github.com/danileao/rocketmusic
+    $ git clone https://github.com/Erikstellet/desafio-2-front.git
 
     # Entre no diretório
     $ cd desafio-2-front
